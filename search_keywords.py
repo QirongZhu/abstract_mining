@@ -1,19 +1,13 @@
 # coding: utf-8
 
-""" Compile publication data for astronomy journals over the last 10 years. """
+""" Compile publication data for astronomy journals over the last 60 years. """
 
 from __future__ import division, print_function
 
-#__author__ = "Andy Casey <acasey@mso.anu.edu.au>"
-
-# Standard library
 import json
-
-# Module specific
 import ads
 
 if __name__ == "__main__":
-    # Let's select the years and journals we want to compare
     years = (1947, 2017)
     keywords = ["for the first time", "novel", "excellent", "robust", "unique", "unprecedented", "promising", "remarkable", "encouraging", "enormous"]
     journals = [# (Scraped from Wikipedia)
