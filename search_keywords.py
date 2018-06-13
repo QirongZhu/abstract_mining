@@ -1,15 +1,12 @@
-# coding: utf-8
-
 """ Compile publication data for astronomy journals over the last 60 years. """
-
-from __future__ import division, print_function
 
 import json
 import ads
 
 if __name__ == "__main__":
     years = (1947, 2017)
-    keywords = ["for the first time", "novel", "excellent", "robust", "unique", "unprecedented", "promising", "remarkable", "encouraging", "enormous"]
+    keywords = ["for the first time", "novel", "excellent", "robust", "unique", "unprecedented", "promising", "remarkable", "encouraging", "enormous", "cutting-edge","state-of-the-art","preeminent"]
+
     journals = [# (Scraped from Wikipedia)
         "Astronomical Journal",
         "Astronomy and Astrophysics",
@@ -21,12 +18,14 @@ if __name__ == "__main__":
         "Publications of the Astronomical Society of Japan",
         "Publications of the Astronomical Society of the Pacific"]
 
+    bibstemlist = ["AJ", "ApJ", "A&A", "MNRAS", "PASP", "PASJ", "PhRvD", "JCAP"]
+
     for keyword in keywords:
         print(keyword)
     
         publication_data = []
     
-        for journal in journals:
+        for journal in bibstemlist:
             # Initiate the dictionary for this journal
             journal_data = {
                 "name": journal,
@@ -38,7 +37,7 @@ if __name__ == "__main__":
                 # Perform the query
                 # We actually don't want all the results, we just want the metadata
                 # which tells us how many publications there were
-                q = ads.SearchQuery(q="abstract:\"{keyword}\" pub:\"{journal}\" year:{year}".format(keyword=keyword, journal=journal, year=year), fl=['id'], rows=1)
+                q = ads.SearchQuery(q="abstract:(=\"{keyword}\") bibstem:\"{journal}\" year:{year}".format(keyword=keyword, journal=journal, year=year), fl=['id'], rows=1)
                 q.execute()
                 
                 num = int(q.response.numFound)
