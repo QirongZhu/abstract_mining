@@ -646,10 +646,6 @@ for keyword in keywords:
             pub = np.array(xs['articles'])
             if(journals == journal):
                 break
-
-        print journals, journal
-        print keyword
-        print
         
         pubyear = pub[:, 0]
         
