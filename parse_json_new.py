@@ -455,9 +455,9 @@ for ind in range(0, len(dataall)):
     
     ratio = ratio * 100
 
-    if(journal != "NewA"):
-        ax9.plot(medianyear, ratio,\
-                 lw=1.5, label=journal, color=new_colors[ind])
+#if(journal != "NewA"):
+        #ax9.plot(medianyear, ratio,\
+        #         lw=1.5, label=journal, color=new_colors[ind])
 
 ax9.set_xlim([1947, 2017])
 ax9.set_title(keyword, loc='left')
@@ -491,18 +491,6 @@ for ind in range(0, len(dataall)):
     ratio = np.zeros(14)
     counts = 0
     
-    for years in range(1947, 2017, 5):
-        index = (pubyear > years) & (pubyear <= years+5)
-        medianyear[counts] = np.median(pubyear[index])
-        if(np.sum(puballcount[index]) > 0):
-            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
-        counts = counts+1
-    
-    ratio = ratio * 100
-    
-    if(journal != "NewA"):
-        ax10.plot(medianyear, ratio,\
-                 lw=1.5, label=journal, color=new_colors[ind])
 
 ax10.set_xlim([1947, 2017])
 ax10.set_title(keyword, loc='left')
@@ -535,19 +523,7 @@ for ind in range(0, len(dataall)):
     medianyear = np.zeros(14)
     ratio = np.zeros(14)
     counts = 0
-    
-    for years in range(1947, 2017, 5):
-        index = (pubyear > years) & (pubyear <= years+5)
-        medianyear[counts] = np.median(pubyear[index])
-        if(np.sum(puballcount[index]) > 0):
-            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
-        counts = counts+1
-    
-    ratio = ratio * 100
-    
-    if(journal != "NewA"):
-        ax11.plot(medianyear, ratio,\
-                 lw=1.5, label=journal, color=new_colors[ind])
+
 
 ax11.set_xlim([1947, 2017])
 ax11.set_title(keyword, loc='left')
@@ -580,19 +556,7 @@ for ind in range(0, len(dataall)):
     medianyear = np.zeros(14)
     ratio = np.zeros(14)
     counts = 0
-    
-    for years in range(1947, 2017, 5):
-        index = (pubyear > years) & (pubyear <= years+5)
-        medianyear[counts] = np.median(pubyear[index])
-        if(np.sum(puballcount[index]) > 0):
-            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
-        counts = counts+1
-    
-    ratio = ratio * 100
 
-    if(journal != "NewA"):
-        ax12.plot(medianyear, ratio,\
-                 lw=1.5, label=journal, color=new_colors[ind])
 
 ax12.set_title(keyword, loc='left')
 
