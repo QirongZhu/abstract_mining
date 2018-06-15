@@ -94,7 +94,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     ratio = ratio * 100
     if(journal != "NewA"):
@@ -136,7 +137,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -180,7 +182,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -222,7 +225,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
 
     ratio = ratio * 100
@@ -266,7 +270,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -310,7 +315,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -354,7 +360,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -397,7 +404,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -441,7 +449,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -485,7 +494,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -529,7 +539,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -573,7 +584,8 @@ for ind in range(0, len(dataall)):
     for years in range(1947, 2017, 5):
         index = (pubyear > years) & (pubyear <= years+5)
         medianyear[counts] = np.median(pubyear[index])
-        ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
+        if(np.sum(puballcount[index]) > 0):
+            ratio[counts] = np.sum(pubcount[index])/(0.0+np.sum(puballcount[index]))
         counts = counts+1
     
     ratio = ratio * 100
@@ -617,53 +629,12 @@ ax1.set_ylabel(' ')
 ax5.set_ylabel('relative frequency (%)')
 ax9.set_ylabel(' ')
 
-
 ax9.set_xlabel('year')
 ax10.set_xlabel('year')
 ax11.set_xlabel('year')
 ax12.set_xlabel('year')
 
-
 fig.set_size_inches(8, 6)
 plt.savefig('keyword_publication.pdf', bbox_inches='tight')
 
-
-for keyword in keywords:
-    
-    with open(keyword+'journal-publications-keywords.json') as data_file:
-        data = json.load(data_file)
-
-    ax = plt.subplot(111)
-
-    for ind in range(0, len(dataall)):
-        x = dataall[ind]
-        puball = np.array(x['articles'])
-        journal=x['name']
-        
-        for indj in range(0, len(data)):
-            xs = data[indj]
-            journals=xs['name']
-            pub = np.array(xs['articles'])
-            if(journals == journal):
-                break
-        
-        pubyear = pub[:, 0]
-        
-        medianyear = np.zeros(14)
-        ratio = np.zeros(14)
-        counts = 0
-        for years in range(1947, 2017, 5):
-            index = (pubyear > years) & (pubyear <= years+5)
-            medianyear[counts] = np.median(pubyear[index])
-            ratio[counts] = np.sum(pub[index, 1])/(0.0+np.sum(puball[index, 1]))
-            counts = counts+1
-        ax.plot(medianyear[:], ratio[:], lw=2, label=journal, color=new_colors[ind])
-
-    ax.set_xlim([1947, 2017])
-    ax.set_ylim([0.00, 0.05])
-    plt.xlabel('year')
-    plt.ylabel('number of publications')
-    plt.legend(loc='upper left', shadow=False, fontsize='medium')
-    plt.savefig(keyword+'publication.pdf', bbox_inches='tight')
-    plt.close()
 
